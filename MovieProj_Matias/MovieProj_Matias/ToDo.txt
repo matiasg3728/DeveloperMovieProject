@@ -1,0 +1,3 @@
+﻿3/10: I added in the models but no DB context yet. lets also try and seed this bad boi too. 
+	Hope and Dream: I wonder if I could run a server on my tower to support this. Wouldnt that be sick. Then I could host this 
+					and maybe the Chromebook Management Site as well. That would be sick and nasty. A combonation you cant deny. 

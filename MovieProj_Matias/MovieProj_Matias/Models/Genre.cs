@@ -11,6 +11,8 @@ namespace MovieProj_Matias.Models
         public int ID { get; set; }
         public string Name { get; set; }
 
+        //I assume that movies can have multiple genres and genres can have multiple movies
+   
         public ICollection<Movie> Movies { get; set; }
 
     }

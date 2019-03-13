@@ -1,0 +1,7 @@
+﻿[Things to think about]
+-We are going to need some way to bulk add in all the chromebook data, otherwise its going to be a bitch anda half to do one by one. There is like 
+300+ chromebooks provisioned atm
+
+TO-Do
+- Design the DB. We need Companies, Communities, and Chromebooks.
+
