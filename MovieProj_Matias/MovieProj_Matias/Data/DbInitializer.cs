@@ -35,7 +35,9 @@ namespace MovieProj_Matias.Data
             var movies = new Movie[]
             {
                 new Movie{ Title="Tree Man 3 - Everywhere to go but no where to leaf", Year=2010, GenreID=1},
+                new Movie{ Title="A tail of 2 kitties", Year=2002, GenreID=1},
                 new Movie{ Title="Silly Bill, The Reconing Is Nye", Year=1996, GenreID=3},
+                new Movie{ Title="Goobler Man, No Doobler Left Un-Dingled", Year=1996, GenreID=3},
                 new Movie{ Title="War for LA, Cholopocolypse", Year=2012, GenreID=2}
             };
             foreach (Movie m in movies)
