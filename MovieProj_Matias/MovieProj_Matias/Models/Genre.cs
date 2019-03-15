@@ -13,7 +13,8 @@ namespace MovieProj_Matias.Models
 
         //I assume that movies can have multiple genres and genres can have multiple movies
    
-        public ICollection<Movie> Movies { get; set; }
+        //Update: Lets put the above idea on the back burner for now. lets let every movie have a genre And that is it! for now!!
+        //public ICollection<Movie> Movies { get; set; }
 
     }
 }

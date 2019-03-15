@@ -9,9 +9,12 @@ namespace MovieProj_Matias.Models
 
         public int ID { get; set; }
         public string Title { get; set; }
-        public int year { get; set; }
+        public int Year { get; set; }
+        public int GenreID { get; set; }
 
-        public ICollection<Genre> Genre { get; set; }
+
+        //refer to the genre model
+        //public ICollection<Genre> Genre { get; set; }
 
 
     }
