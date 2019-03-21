@@ -24,7 +24,7 @@ namespace MovieProj_Matias.Controllers
         {
             return View(await _context.Movies.ToListAsync());
         }
- 
+
         // GET: Movies/Details/5
         public async Task<IActionResult> Details(int? id)
         {
@@ -32,25 +32,9 @@ namespace MovieProj_Matias.Controllers
             {
                 return NotFound();
             }
-            
 
-            /*
-             Im still pretty unsure about what exactly the '=>' operator means but it may be similar function to 'this'
 
-            Here is an example i saw on the internet...
 
-            var departments = _context.Departments.Include(d => d.Courses);
-
-                the Include() function is used when you are pulling together related data (creates a join query).
-                Notice that it is used and within its params it looks like that statement is basically declaring a 
-                variable to represent the 'Departments' then specifying what 'thing' in departments you want.
-
-                Just some thoughts
-
-                
-             */
-
-         
 
             var movie = await _context.Movies
                 .FirstOrDefaultAsync(m => m.ID == id);
@@ -59,20 +43,47 @@ namespace MovieProj_Matias.Controllers
                 return NotFound();
             }
 
-            // 3/20/18 10:21pm today is monumental. I just realized I can access the ID property from the frickin obj i pulled from my db. Astounding it took me practically 2 weeks
             var mID = movie.GenreID;
 
-            // 3/20/18 10:27pm HOW THE FUCK DO I RETURN 2 FICKIN MODELSSSSSSSSSSSSSS i knew this would happen to me. Taking a quick break to calm down
+
             var genre = await _context.Genres
                 .FirstOrDefaultAsync(g => g.ID == mID);
+
+            MovieDetailsViewModel mDetailsModel = new MovieDetailsViewModel();
+            mDetailsModel.Movie = movie;
+            mDetailsModel.Genre = genre;
+
+            return View(mDetailsModel);
+
+            /*
+                Im still pretty unsure about what exactly the '=>' operator means but it may be similar function to 'this'
+
+                Here is an example i saw on the internet...
+
+                    var departments = _context.Departments.Include(d => d.Courses);
+
+                    the Include() function is used when you are pulling together related data (creates a join query).
+                    Notice that it is used and within its params it looks like that statement is basically declaring a 
+                    variable to represent the 'Departments' then specifying what 'thing' in departments you want.
+
+                    Just some thoughts
+            */
+
+            // 3/20/18 10:21pm today is monumental. I just realized I can access the ID property from the frickin obj i pulled from my db. Astounding it took me practically 2 weeks
+
+            // 3/20/18 10:27pm HOW THE FUCK DO I RETURN 2 FICKIN MODELSSSSSSSSSSSSSS i knew this would happen to me. Taking a quick break to calm down
 
             // you bastard im hot on your trail. I found some answers online and I will use them! First up to bat... View Model
             // Im doing this because the article i read said that View models are "Strongly Typed" which i think is a good rule of thumb (If i remember that correctly)
             // I assume its a good idea to go with something strongly typed because it leaves less room for error. It only takes what is defined in its class so everything that 
             // it does is expected. At least that is the logic I will go with. What do you think person reading this? Also im def commiting this before I mess everything up. Not that Im 
             // very far :Shrug:
-
-            return View(movie);
+            
+            // 3/20/19 11:30pm
+            // Im back, and as you can obviously tell, i won. View model = Great success
+            // I honestly got so excited I ran around my house 2 times and im still #pumped.
+            // I guess the next logical step is to update the index page to look lit afffff. Then we can do whatever else idc.
+            // Id like to thank my mother, and my father, and microsoft, and of course my cat.
         }
 
         // GET: Movies/Create
