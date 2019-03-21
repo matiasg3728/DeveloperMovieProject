@@ -14,6 +14,7 @@ namespace MovieProj_Matias.Models
 
 
         //refer to the genre model
+        // 3/20/19 for a second I almost uncommented. imnotgonletugetthechangeStuupid
         //public ICollection<Genre> Genre { get; set; }
 
 
