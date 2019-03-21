@@ -1,3 +1,11 @@
 ﻿3/10: I added in the models but no DB context yet. lets also try and seed this bad boi too. 
 	Hope and Dream: I wonder if I could run a server on my tower to support this. Wouldnt that be sick. Then I could host this 
 					and maybe the Chromebook Management Site as well. That would be sick and nasty. A combonation you cant deny. 
+
+3/20: 10 days later and I just figured out what a view model is for but Im on the path to victory. I think the next order of business
+		is to figure out how to make specialized components. I.E.
+		- The side navigation bar I thought up in order to quickly switch between
+		movies
+		- The "Recently Added Movies" table : Shows the most recently added movies to the DB, if a genre is selected then it
+		will show the most recently added movies to the genre.
+		
