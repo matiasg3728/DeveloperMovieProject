@@ -1,0 +1,36 @@
+﻿@model IEnumerable<MovieProj_Matias.Models.Genre>
+
+<nav id="sidebar">
+
+    <div class="sidebar-header"><h3>Genres!</h3></div>
+
+    <ul class="list-unstyled components">
+
+        @foreach (var genre in Model)
+        {
+            <li id=@genre.ID value=@genre.Name> @genre.Name </li>   
+        }
+
+    </ul>
+
+</nav>
+
+
+<style>
+
+    .genre-selector {
+        
+
+
+    }
+
+</style>
+
+
+<script>
+
+
+    // it works!
+    //$("div").addClass("yeeto");
+
+</script>
